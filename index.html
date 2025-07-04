@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Search App</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="toggle-container">
+    <button id="themeToggle">🔘</button>
+  </div>
+  <div class="container">
+    <h1>🎬 Movie Search App</h1>
+
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search for movies..."/>
+      <ul id="searchHistoryList" class="history-list"></ul>
+      <button onclick="searchMovies()">Search</button>
+      <select id="ratingFilter">
+        <option value="all">All Ratings</option>
+        <option value="7">7+</option>
+        <option value="8">8+</option>
+        <option value="9">9+</option>
+      </select>
+      <select id="genreFilter">
+        <option value="all">All Genres</option>
+        <option value="action">Action</option>
+        <option value="comedy">Comedy</option>
+        <option value="horror">Horror</option>
+        <option value="drama">Drama</option>
+      </select>
+    </div>
+
+    <div id="movies" class="movies-grid"></div>
+    <button id="loadMoreBtn" onclick="loadMore()">Load More</button>
+
+    <h2>Your Favorites</h2>
+    <div id="favorites" class="movies-grid"></div>
+  </div>
+
+  <div id="movieModal" class="modal">
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
